@@ -6,6 +6,8 @@ import matplotlib.patches as patches
 import matplotlib.pyplot as plt
 from pylab import get_cmap
 from datetime import datetime
+import os
+
 
 class Network:
 
@@ -189,7 +191,8 @@ class Network:
 		return(0)
 
 
-
+	def makeGif(self):
+		os.system('convert @image_list.txt {}/{}.gif'.format(picPath,gif_name)) # On windows convert is 'magick'
 
 
 
